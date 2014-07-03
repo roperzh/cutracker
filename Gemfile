@@ -14,7 +14,7 @@ gem "shield",          "~> 2.1.0"
 
 # assets management
 gem "sprockets",       "~> 2.11.0"
-gem "sass",            "~> 3.3.4"
+gem "sass",            "3.2.13"
 gem "ejs",             "~> 1.1.1"
 
 # security

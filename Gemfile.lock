@@ -33,7 +33,7 @@ GEM
     rack_csrf (2.4.0)
       rack (>= 0.9)
     rake (10.1.0)
-    sass (3.3.8)
+    sass (3.2.13)
     shield (2.1.0)
       armor
     simplecov (0.7.1)
@@ -62,7 +62,7 @@ DEPENDENCIES
   rack-protection (~> 1.5.2)
   rack_csrf (~> 2.4.0)
   rake
-  sass (~> 3.3.4)
+  sass (= 3.2.13)
   shield (~> 2.1.0)
   simplecov (~> 0.7.1)
   sprockets (~> 2.11.0)
