@@ -1,0 +1,17 @@
+// -------------------------------------------
+//   Buttons & buttons states
+// -------------------------------------------
+
+.button {
+  border: 1px solid;
+  color: white;
+  font-size: 15px;
+  padding: 5px 15px;
+  border-radius: 5px;
+
+  &.green {
+    background: $green;
+    border-color: $dark-green;
+  }
+}
+

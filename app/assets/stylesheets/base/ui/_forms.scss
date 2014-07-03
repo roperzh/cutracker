@@ -1,0 +1,36 @@
+// -------------------------------------------
+//   Forms & forms stuff
+// -------------------------------------------
+
+.input-group {
+  position: relative;
+}
+
+.input-with-symbol {
+  margin: 15px auto;
+  padding: 10px;
+  border: 1px solid $blue-haze;
+  border-radius: 2px;
+
+  input {
+    border: none;
+    background: transparent;
+    outline: none;
+    width: 265px;
+  }
+
+  .symbol {
+    color: $blue-haze;
+    margin: 0 25px 0 5px;
+
+    &:after {
+      content: "";
+      height: 25px;
+      width: 1px;
+      background: $blue-haze;
+      position: absolute;
+      left: 40px;
+      top: 12px;
+    }
+  }
+}

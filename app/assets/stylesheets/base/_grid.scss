@@ -1,0 +1,53 @@
+// -------------------------------------------
+//   Grid
+//     -> Handmade & very basic grid layout
+// -------------------------------------------
+
+/* Container for a group of columns */
+.grid {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+/* Target all the columns, and apply sensible defaults */
+[class*='col-'] {
+  float: left;
+
+  .grid &:last-of-type {
+    padding-right: 0;
+  }
+}
+
+/*
+ * Very simple column layout, every group of columns must be wrapped inside
+ * a container with the `.grid` class.
+ *
+ * The names of the columns try to be semantic as possible, so for example
+ * a column filling 2/3 of the screen could be done like this:
+ *
+ * <div class="grid">
+ *  <div class="col-2-3">I'm 2/3 of the screen!</div>
+ *  <div class="col-1-3">I'm 1/3 of the screen!</div>
+ * </div>
+ */
+.col-3-4 {
+  width: 75%;
+}
+.col-2-3 {
+  width: 66.66%;
+}
+.col-1-3 {
+  width: 33.33%;
+}
+.col-1-2 {
+  width: 50%;
+}
+.col-1-4 {
+  width: 25%;
+}
+.col-1-8 {
+  width: 12.5%;
+}

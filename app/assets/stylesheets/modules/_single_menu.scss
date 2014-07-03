@@ -1,0 +1,26 @@
+// -------------------------------------------
+//   Single-menu
+// -------------------------------------------
+
+.single-menu-title {
+  font-size: 15px;
+  color: $lynch;
+  text-transform: uppercase;
+}
+
+.single-menu {
+  padding: 0;
+  list-style: none;
+
+  .numeric-label {
+    position: absolute;
+    left: 150px;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+  }
+}
+

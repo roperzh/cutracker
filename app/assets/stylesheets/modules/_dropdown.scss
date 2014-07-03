@@ -1,0 +1,19 @@
+// -------------------------------------------
+//   Dropdown
+//     -> Simple drop-down
+// -------------------------------------------
+
+.dropdown {
+  .dropdown-title {
+    display: inline-block;
+  }
+
+  .dropdown-items {
+    list-style: none;
+    display: none;
+
+    &.open {
+      display: initial;
+    }
+  }
+}

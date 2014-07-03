@@ -1,0 +1,159 @@
+// *************************************
+//   Application
+// *************************************
+
+// -------------------------------------
+//   Vendor
+// -------------------------------------
+
+@import "vendor/octicons";
+
+// -------------------------------------
+//   Mixins
+// -------------------------------------
+
+@import "mixins/clearfix";
+@import "mixins/transition";
+@import "mixins/transform";
+
+// -------------------------------------
+//   Base
+// -------------------------------------
+
+@import "base/variables";
+@import "base/base";
+@import "base/grid";
+@import "base/helpers";
+@import "base/ui/buttons";
+@import "base/ui/checkboxes";
+@import "base/ui/forms";
+
+// -------------------------------------
+//   Layouts
+// -------------------------------------
+
+@import "layouts/fixed";
+@import "layouts/content_container";
+@import "layouts/horizontal_menu";
+@import "layouts/vertical_menu";
+@import "layouts/multi_menu";
+@import "layouts/background_with_diagonals";
+
+// -------------------------------------
+//   Modules
+// -------------------------------------
+
+@import "modules/menu_header";
+@import "modules/single_menu";
+@import "modules/numeric_label";
+@import "modules/dropdown";
+@import "modules/tag";
+@import "modules/floating_box";
+@import "modules/login_form";
+
+.tag-list {
+  list-style: none;
+  padding: 0;
+}
+
+.chat-box {
+  height: 100%;
+  overflow: hidden;
+  border-right: 1px solid $blue-haze;
+
+  .messages-list {
+    height: 100%;
+    width: 110%;
+    padding: 0;
+    list-style: none;
+    overflow: auto;
+  }
+
+  .message {
+    height: 100px;
+    overflow: hidden;
+    padding: 5px;
+    border-bottom: 1px solid $blue-haze;
+  }
+}
+
+.menu-header {
+  border-bottom: 1px solid $blue-haze;
+}
+
+.task-box {
+  height: 100%;
+
+  background: #eceff3;
+
+  .tasks-list {
+    width: 100%;
+    height: 90%;
+    padding: 0;
+    overflow-y: auto;
+
+    list-style: none;
+  }
+
+  .task {
+    width: 80%;
+    margin: 10px auto;
+    padding: 15px;
+    max-height: 180px;
+    overflow: hidden;
+
+    border: 1px solid #dbe0ea;
+    border-radius: 5px;
+    background: $white;
+
+    @include transition(all .4s ease-in, height .3s);
+
+    header {
+      position: relative;
+
+      @include clearfix();
+
+      .task-status {
+        float: left;
+        font-size: 60px;
+      }
+
+      .task-title {
+        display: inline-block;
+        margin-left: 30px;
+
+        line-height: 0;
+      }
+
+      .time-spent {
+        position: absolute;
+        top: 5px;
+        right: 0;
+
+        font-size: 30px;
+      }
+    }
+
+    .tag-list {
+      margin-left: 60px;
+    }
+
+    &.active {
+      width: 85%;
+      height: 250px;
+      max-height: initial;
+
+      .task-status {
+        &:before { content: '\f0bf'}
+      }
+    }
+
+    &.paused {
+      .task-status {
+        &:before { content: '\f0bb'}
+      }
+
+      height: 90px;
+    }
+  }
+}

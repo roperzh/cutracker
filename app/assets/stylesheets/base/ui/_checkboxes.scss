@@ -1,0 +1,34 @@
+// -------------------------------------------
+//   Checkboxes
+// -------------------------------------------
+
+input[type=checkbox] {
+  display: none;
+
+  &:checked + label:before {
+    content: "\2713";
+    line-height: 15px;
+    top: 0;
+    color: white;
+    background: $apple;
+    border-color: $dark-green;
+  }
+
+  & + label {
+    cursor: pointer;
+    color: $gray;
+
+    &:before {
+      content: "";
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      border: 1px solid $blue-haze;
+      border-radius: 2px;
+      position: relative;
+      top: 2px;
+      margin-right: 10px;
+    }
+  }
+}
+

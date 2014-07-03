@@ -1,0 +1,49 @@
+// -------------------------------------------------------------------
+//   Layout with diagonals                            +-----+
+//   -> Composed by two rectangles rotated,           |  /  |
+//   giving the illusion of a background with         | /   |
+//   two parallelograms                               |/    |
+//                                                    +-----+
+// --------------------------------------------------------------------
+
+/* Container for the elements */
+#diagonals-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+/* One of the two sections that compose the background of this layout */
+.background-section {
+  position: absolute;
+  right: -25%;
+  height: 100%;
+  width: 150%;
+
+  /* Roate the rectangles making the illusion of having two parallelograms */
+  @include transform(rotate(-5deg));
+
+  /* Used on login animations */
+  @include transition(bottom 2s ease);
+
+  /* The section at the top */
+  &.top {
+    bottom: 50%;
+    background: $cornflower-blue;
+
+    &.out {
+      bottom: 150%;
+    }
+  }
+
+  /* The section at the bottom */
+  &.bottom {
+    bottom: -50%;
+    background: $outer-space;
+
+    &.out {
+      bottom: -150%;
+    }
+  }
+}

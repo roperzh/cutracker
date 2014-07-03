@@ -1,0 +1,26 @@
+// -------------------------------------------
+//   Tag
+// -------------------------------------------
+
+.tag {
+  float: left;
+  margin: 0 3px;
+  padding: 2px 5px;
+
+  border-radius: 2px;
+  color: $white;
+  font-size: 10px;
+  font-weight: bolder;
+
+  &.blue {
+    background: $blue;
+  }
+
+  &.green {
+    background: $apple;
+  }
+
+  &.pink {
+    background: $pink;
+  }
+}

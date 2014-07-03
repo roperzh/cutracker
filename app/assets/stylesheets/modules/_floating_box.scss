@@ -1,0 +1,45 @@
+// -------------------------------------------
+//   Floating Box
+//     -> Box with header and content, floating
+//        in the center on the screen, can be
+//        used for modals and login forms
+// -------------------------------------------
+
+.floating-box {
+  position: relative;
+  width: 400px;
+  top: 25%;
+  margin: 0 auto;
+
+  background: white;
+  border-radius: 5px;
+
+  @include transition(opacity 1s ease, filter 1s ease, -webkit-filter 1s ease);
+
+  .image-header {
+    height: 200px;
+
+    border-radius: 5px 5px 0 0;
+
+    .caption {
+      position: relative;
+      bottom: 50px;
+      left: 25px;
+
+      color: white;
+      font-size: 25px;
+      font-weight: bold;
+    }
+  }
+
+  .floating-box-content {
+    padding: 30px;
+  }
+
+  /* Used for animations on login */
+  &.out {
+    opacity: 0;
+    filter: url(../filters.svg#blur);
+    -webkit-filter: blur(3px);
+  }
+}

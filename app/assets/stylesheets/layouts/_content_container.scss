@@ -1,0 +1,10 @@
+// -------------------------------------------
+//   Content container
+//   -> wrapper for content, with offsets for
+//     the left navbar and the top menu
+// -------------------------------------------
+
+#content-container {
+  height: 100%;
+  padding: $content-offset-top 0 0 $content-offset-left;
+}
