@@ -7,6 +7,7 @@ require "shield"
 
 Cuba.use Rack::Session::Cookie, key: ENV["APP_KEY"], secret: ENV["APP_SECRET"]
 Cuba.use Rack::Protection::RemoteReferrer
+Cuba.use Rack::ShowExceptions
 Cuba.use Rack::Protection
 Cuba.use Rack::Reloader
 
@@ -26,6 +27,12 @@ Dir["app/models/**/*.rb"].each  { |f| require(f) }
 Dir["app/routes/**/*.rb"].each  { |f| require(f) }
 
 Cuba.define do
+  on "api" do
+    on "projects" do
+      run ProjectsRouter
+    end
+  end
+
   on default do
     res.write view("index")
   end
