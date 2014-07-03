@@ -7,4 +7,8 @@ class ProjectsRouter < Cuba
       end
     end
   end
+
+  def current_user
+    authenticated(User)
+  end
 end
