@@ -21,9 +21,9 @@ Cuba.settings[:render][:layout] = "layouts/application"
 Mongoid.load!("config/mongoid.yml")
 
 # require application files
-Dir["app/helpers/**/*.rb"].each { |f| require(f) }
-Dir["app/models/**/*.rb"].each  { |f| require(f) }
-Dir["app/routes/**/*.rb"].each  { |f| require(f) }
+Dir["./app/helpers/**/*.rb"].each { |f| require(f) }
+Dir["./app/models/**/*.rb"].each  { |f| require(f) }
+Dir["./app/routes/**/*.rb"].each  { |f| require(f) }
 
 Cuba.define do
   on "sessions" do
