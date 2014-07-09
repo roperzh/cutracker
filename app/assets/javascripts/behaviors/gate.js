@@ -10,7 +10,7 @@ Ui.Gate = Essential.Behavior.extend({
   manageLogin: function(e) {
 
     /* Select all the elements that need to be animated */
-    var out = this.el.getElementsByClassName("animate");
+    var out = this.el.getElementsByClassName("gate-animation");
 
     document.body.appendChild(e.detail.content);
 
