@@ -27,7 +27,7 @@ Ui.LoginForm = Essential.Behavior.extend({
 
         /* Let know to the rest of the application that the user is logged */
         this.emit({
-          channel: "user:logged",
+          channel: "gate:open",
           data: {
             content: dashboard
           }

@@ -13,8 +13,10 @@ Ui.Logout = Essential.Behavior.extend({
     Ajax.delete({
       url: "/sessions",
       success: function() {
-        window.location.reload();
-      }
+        this.emit({
+          channel: "gate:close"
+        });
+      }.bind(this)
     });
   }
 });

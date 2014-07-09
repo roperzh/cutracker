@@ -4,19 +4,14 @@
 
 Ui.Gate = Essential.Behavior.extend({
   channels: {
-    "user:logged": "manageLogin"
+    "gate:open": "openGate",
+    "gate:close": "closeGate"
   },
 
-  manageLogin: function(e) {
-
-    /* Select all the elements that need to be animated */
-    var out = this.el.getElementsByClassName("gate-animation");
-
+  openGate: function(e) {
     document.body.appendChild(e.detail.content);
 
-    for (var i = out.length - 1; i >= 0; i--) {
-      out[i].classList.add("out");
-    };
+    this.animate();
 
     Essential.loadBehaviors({
       application: Ui,
@@ -26,5 +21,18 @@ Ui.Gate = Essential.Behavior.extend({
     setTimeout(function() {
       this.el.remove();
     }.bind(this), 500);
+  },
+
+  closeGate: function() {
+    /* TODO: Animate the logout */
+    window.location.reload();
+  },
+
+  animate: function() {
+    var animatedElements = this.el.getElementsByClassName("gate-animation");
+
+    for (var i = animatedElements.length - 1; i >= 0; i--) {
+      animatedElements[i].classList.toggle("out");
+    };
   }
 });
