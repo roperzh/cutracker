@@ -9,7 +9,7 @@ Dotenv.load ".env.#{rack_env}", ".env"
 map "/assets" do
   env = Sprockets::Environment.new
 
-  %w[javascripts stylesheets images].each do |path|
+  %w[javascripts stylesheets images fonts].each do |path|
     env.append_path "app/assets/#{path}"
   end
 
