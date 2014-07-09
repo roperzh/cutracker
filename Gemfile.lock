@@ -23,6 +23,8 @@ GEM
       moped (~> 1.4)
       origin (~> 1.0)
       tzinfo (~> 0.3.29)
+    mongoid-tags-arent-hard (1.1.5)
+      mongoid (>= 3.0.0)
     moped (1.5.2)
     multi_json (1.10.1)
     origin (1.1.0)
@@ -58,6 +60,7 @@ DEPENDENCIES
   dotenv (~> 0.10.0)
   jubilee (~> 2.0.0.pre.java)
   mongoid (~> 3.1.6)
+  mongoid-tags-arent-hard (~> 1.1.5)
   rack-protection (~> 1.5.2)
   rack_csrf (~> 2.4.0)
   rake

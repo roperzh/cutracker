@@ -9,8 +9,9 @@ gem "mongoid",         "~> 3.1.6"
 
 # application stack
 gem "rake"
-gem "dotenv",          "~> 0.10.0"
-gem "shield",          "~> 2.1.0"
+gem "dotenv",                  "~> 0.10.0"
+gem "shield",                  "~> 2.1.0"
+gem "mongoid-tags-arent-hard", "~> 1.1.5"
 
 # assets management
 gem "sprockets",       "~> 2.11.0"
