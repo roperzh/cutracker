@@ -1,5 +1,5 @@
 // -------------------------------------------------------------------
-//   Layout with diagonals                            +-----+
+//   Gate                                             +-----+
 //   -> Composed by two rectangles rotated,           |  /  |
 //   giving the illusion of a background with         | /   |
 //   two parallelograms                               |/    |
@@ -7,7 +7,7 @@
 // --------------------------------------------------------------------
 
 /* Container for the elements */
-#diagonals-container {
+#gate-container {
   position: relative;
   overflow: hidden;
   width: 100%;
@@ -15,11 +15,12 @@
 }
 
 /* One of the two sections that compose the background of this layout */
-.background-section {
+.gate {
   position: absolute;
   right: -25%;
   height: 100%;
   width: 150%;
+  z-index: 99;
 
   /* Roate the rectangles making the illusion of having two parallelograms */
   @include transform(rotate(-5deg));
