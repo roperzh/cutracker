@@ -1,5 +1,6 @@
 //= require starter
 //= require_tree ./vendor
+//= require_tree ./services
 //= require_tree ./behaviors
 
 Ui.Task = Essential.Behavior.extend({
