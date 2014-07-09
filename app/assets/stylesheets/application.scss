@@ -159,3 +159,15 @@
     }
   }
 }
+
+.dashboard {
+  height: 100%;
+  position: fixed;
+}
+
+.error-field {
+  text-align: center;
+  font-size: 13px;
+  margin: 15px;
+  color: $persian-red;
+}
