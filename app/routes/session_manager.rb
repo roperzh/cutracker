@@ -6,8 +6,7 @@ class SessionManager < Cuba
 
     on post do
       on param("email"), param("pass") do |email, pass|
-        test = login(User, email, pass)
-        if test
+        if login(User, email, pass)
           res.redirect "/dashboard"
         else
           res.status = 401
