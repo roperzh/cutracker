@@ -26,6 +26,8 @@ Dir["./app/helpers/**/*.rb"].each { |f| require(f) }
 Dir["./app/models/**/*.rb"].each  { |f| require(f) }
 Dir["./app/routes/**/*.rb"].each  { |f| require(f) }
 
+Cuba.plugin AssetHelpers
+
 Cuba.define do
   on "sessions" do
     run SessionManager
