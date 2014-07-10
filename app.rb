@@ -2,6 +2,7 @@ require "cuba"
 require "cuba/render"
 require "erb"
 require "mongoid"
+require "mongoid-tags-arent-hard"
 require "rack/protection"
 require "shield"
 
