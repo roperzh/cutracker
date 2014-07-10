@@ -42,7 +42,7 @@ Cuba.define do
     end
 
     on "dashboard" do
-      res.write view("dashboard")
+      res.write view("dashboard", tasks: current_user.tasks)
     end
   end
 

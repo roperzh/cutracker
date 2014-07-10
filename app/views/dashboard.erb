@@ -46,19 +46,21 @@
           <i class="octicon octicon-chevron-down"></i>
         </header>
         <ul class="tasks-list">
+          <% tasks.each do |task| %>
             <li class="task paused" data-behavior="task">
               <header>
                 <i class="octicon task-status"></i>
-                <h3 class="task-title">Task title</h3>
-                <time class="time-spent">04:54</time>
+                <h3 class="task-title"><%= task.name %></h3>
+                <time class="time-spent"><%= task.duration %></time>
                 <ul class="tag-list">
-                    <li class="tag <%= %w(blue pink green).sample %>">Tagname</li>
+                  <% task.tags.each do |tag| %>
+                    <li class="blue tag"><%= tag %></li>
+                  <% end %>
                 </ul>
               </header>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+              <p><%= task.description %></p>
             </li>
+          <% end %>
         </ul>
       </div>
     </div>
