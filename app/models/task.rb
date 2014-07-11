@@ -4,7 +4,7 @@ class Task
 
   # Field definitions
   field :name,        type: String
-  field :duration,    type: String, default: "00:00"
+  field :duration,    type: String, default: "00:00:00"
   field :description, type: String
   field :status,      type: Integer, default: 0
 
