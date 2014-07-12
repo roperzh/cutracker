@@ -12,7 +12,10 @@ GEM
     cuba (3.1.1)
       rack
     dotenv (0.10.0)
-    ffi (1.9.3)
+    dotjs_sprockets (0.1.0)
+      execjs (~> 2)
+      sprockets (~> 2)
+    execjs (2.2.1)
     ffi (1.9.3-java)
     hike (1.2.3)
     i18n (0.6.9)
@@ -59,6 +62,7 @@ PLATFORMS
 DEPENDENCIES
   cuba (~> 3.1.1)
   dotenv (~> 0.10.0)
+  dotjs_sprockets (~> 0.1)
   jubilee (~> 2.0.0.pre.java)
   mongoid (~> 3.1.6)
   mongoid-tags-arent-hard (~> 1.1.5)

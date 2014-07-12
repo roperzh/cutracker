@@ -16,6 +16,7 @@ gem "mongoid-tags-arent-hard", "~> 1.1.5"
 # assets management
 gem "sprockets",       "~> 2.11.0"
 gem "sass",            "~> 3.2.19"
+gem "dotjs_sprockets", "~> 0.1"
 
 # security
 gem "rack_csrf",       "~> 2.4.0"
