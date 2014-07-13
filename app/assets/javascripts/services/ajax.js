@@ -15,14 +15,13 @@ Ajax = {
 
   post: function(options) {
     options.method = "POST";
+    options = this.prepareForPostOrPut(options);
+    this.request(options);
+  },
 
-    /* If the data isn't a FormData object, lets encode it */
-    if(!options.data.toString().match("FormData")) {
-      options.headers = options.headers || {};
-      options.headers['Content-Type'] = 'application/x-www-form-urlencoded; charset=UTF-8';
-      options.data = formurlencoded.encode(options.data);
-    }
-
+  put: function(options) {
+    options.method = "PUT";
+    options = this.prepareForPostOrPut(options);
     this.request(options);
   },
 
@@ -53,5 +52,16 @@ Ajax = {
     request.onerror = function() {
       options.error(request);
     };
+  },
+
+  prepareForPostOrPut: function(options) {
+    /* If the data isn't a FormData object, lets encode it */
+    if(!options.data.toString().match("FormData")) {
+      options.headers = options.headers || {};
+      options.headers['Content-Type'] = 'application/x-www-form-urlencoded; charset=UTF-8';
+      options.data = formurlencoded.encode(options.data);
+    }
+
+    return options;
   }
 };
