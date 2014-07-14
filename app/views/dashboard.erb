@@ -47,10 +47,15 @@
         </header>
         <ul class="tasks-list">
           <% tasks.each do |task| %>
-            <li class="task paused" data-behavior="task">
+            <li class="task paused"
+                data-behavior="task"
+                data-id="<%= task.id %>">
               <header>
                 <i class="octicon task-status"></i>
-                <h3 class="task-title"><%= task.name %></h3>
+                <h3 class="task-title"
+                    data-behavior="editable"
+                    data-name="name"><%= task.name %>
+                </h3>
                 <time class="time-spent"><%= task.duration %></time>
                 <ul class="tag-list">
                   <% task.tags.each do |tag| %>
@@ -58,7 +63,11 @@
                   <% end %>
                 </ul>
               </header>
-              <p><%= task.description %></p>
+              <p class="task-description"
+                 data-behavior="markdown-editable"
+                 data-element="textarea"
+                 data-name="description"><%= task.description %>
+              </p>
             </li>
           <% end %>
         </ul>
