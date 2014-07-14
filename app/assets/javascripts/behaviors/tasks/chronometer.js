@@ -33,5 +33,9 @@ Ui.Chronometer = Essential.Behavior.extend({
       this[preUnit] = 0;
       this[postUnit] += 1;
     }
+  },
+
+  duration: function() {
+    return Time.format(this.hours, this.minutes, this.seconds);
   }
 });
