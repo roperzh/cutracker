@@ -36,12 +36,6 @@ Cuba.define do
   end
 
   on authenticated(User) do
-    on "api" do
-      on "v1" do
-        run Api::V1
-      end
-    end
-
     on "dashboard" do
       res.write view("dashboard", tasks: current_user.tasks)
     end
