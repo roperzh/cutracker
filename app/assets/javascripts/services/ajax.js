@@ -15,22 +15,26 @@ Ajax = {
 
   post: function(options) {
     options.method = "POST";
-    options = this.prepareForPostOrPut(options);
     this.request(options);
   },
 
   put: function(options) {
     options.method = "PUT";
-    options = this.prepareForPostOrPut(options);
     this.request(options);
   },
 
   request: function(options) {
     var request = new XMLHttpRequest();
 
+    // Parse the request data on POST and PUT requests
+    if(options.method === "PUT" || options.method === "POST") {
+      options = this.prepareForPostOrPut(options);
+    }
+
     request.open(options.method, options.url);
     this.setHeaders(request, options.headers);
     this.setCallbacks(request, options);
+
     request.send(options.data);
   },
 
@@ -43,7 +47,7 @@ Ajax = {
   setCallbacks: function(request, options) {
     request.onload = function() {
       if (request.status >= 200 && request.status < 400) {
-        options.success(request);task
+        options.success(request);
       } else {
         options.error(request);
       }
