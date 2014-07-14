@@ -39,6 +39,10 @@ Cuba.define do
     on "dashboard" do
       res.write view("dashboard", tasks: current_user.tasks)
     end
+
+    on "tasks" do
+      run TaskManager
+    end
   end
 
   on default do
