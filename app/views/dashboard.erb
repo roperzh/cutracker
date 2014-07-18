@@ -29,15 +29,15 @@
 
   <div id="content-container">
     <div class="grid full-height">
-      <div class="col-1-4 chat-box">
+      <div class="col-1-4 chat-box" data-behavior="chat-box">
         <header class="small menu-header">
           <h3 class="title">Team Chat</h3>
           <i class="icon-arrow-down"></i>
         </header>
         <ul class="messages-list">
-            <li class="message">
-            </li>
+            <li class="message"></li>
         </ul>
+        <input type="text" placeholder="Send a message">
       </div>
       <div class="col-3-4 task-box">
         <header class="small menu-header">
@@ -53,8 +53,7 @@
                 <i class="icon-status task-status"></i>
                 <h3 class="task-title"
                     data-behavior="editable"
-                    data-name="name"><%= task.name %>
-                </h3>
+                    data-name="name"><%= task.name %></h3>
                 <time class="time-spent"><%= task.duration %></time>
                 <ul class="tag-list">
                   <% task.tags.each do |tag| %>
