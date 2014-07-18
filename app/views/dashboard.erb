@@ -1,11 +1,10 @@
 <div class="dashboard">
   <section class="fixed-top horizontal-menu">
     <ul class="horizontal-menu-list">
-      <li class="menu-item iconic-item"><a href="#"><i class="octicon octicon-gist-secret"></i></a></li>
       <li class="dropdown menu-item" data-behavior="dropdown">
         <h3 class="dropdown-title">Jan Losert</h3>
         <a href="#" data-behavior="logout">Logout</a>
-        <i class="octicon octicon-chevron-down dropdown-toggle"></i>
+        <i class="icon-arrow-down dropdown-toggle"></i>
         <ul class="dropdown-items">
           <li class="item"><a href="#">Item</a></li>
         </ul>
@@ -33,7 +32,7 @@
       <div class="col-1-4 chat-box">
         <header class="small menu-header">
           <h3 class="title">Team Chat</h3>
-          <i class="octicon octicon-chevron-down"></i>
+          <i class="icon-arrow-down"></i>
         </header>
         <ul class="messages-list">
             <li class="message">
@@ -43,7 +42,7 @@
       <div class="col-3-4 task-box">
         <header class="small menu-header">
           <h3 class="title">Tasks</h3>
-          <i class="octicon octicon-chevron-down"></i>
+          <i class="icon-arrow-down"></i>
         </header>
         <ul class="tasks-list">
           <% tasks.each do |task| %>
@@ -51,7 +50,7 @@
                 data-behavior="task"
                 data-id="<%= task.id %>">
               <header>
-                <i class="octicon task-status"></i>
+                <i class="icon-status task-status"></i>
                 <h3 class="task-title"
                     data-behavior="editable"
                     data-name="name"><%= task.name %>

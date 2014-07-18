@@ -146,13 +146,13 @@
       max-height: initial;
 
       .task-status {
-        &:before { content: '\f0bf'}
+        &:before { content: '\e602'}
       }
     }
 
     &.paused {
       .task-status {
-        &:before { content: '\f0bb'}
+        &:before { content: '\e603'}
       }
 
       height: 90px;
