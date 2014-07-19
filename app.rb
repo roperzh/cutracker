@@ -38,7 +38,8 @@ Cuba.define do
 
   on authenticated(User) do
     on "dashboard" do
-      res.write view("dashboard", tasks: current_user.tasks)
+      messages = ChatMessage.limit(10)
+      res.write view("dashboard", tasks: current_user.tasks, messages: messages)
     end
 
     on "tasks" do

@@ -18,7 +18,7 @@ Ui.ChatBox = Essential.Behavior.extend({
 
   registerVertxHandler: function() {
     this.eb.registerHandler("chat", function(data) {
-      var parsedText = this.parseMessage(data.message);
+      var parsedText = this.parseMessage(data.content);
       this.messagesList.innerHTML += this.template(parsedText);
       this.scrollToLastMessage();
     }.bind(this));
@@ -32,7 +32,8 @@ Ui.ChatBox = Essential.Behavior.extend({
 
     if(e.keyCode === 13) {
       this.eb.publish("chat", {
-        message: message
+        content: message,
+        user_id: SharedData.user_id
       });
 
       input.value = "";
