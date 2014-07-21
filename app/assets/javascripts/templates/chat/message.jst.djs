@@ -1,1 +1,4 @@
-<li class="message">{{= it}}</li>
+<li class="message">
+  <strong>{{= it.sender}} : </strong>
+  <span>{{= it.message}}</span>
+</li>
