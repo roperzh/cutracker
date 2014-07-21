@@ -1,5 +1,8 @@
 <script type="text/javascript">
   SharedData = {
-    user_id: "<%= current_user.id %>"
+    user: {
+      id: "<%= current_user.id if current_user %>",
+      full_name: "<%= current_user.full_name if current_user %>",
+    }
   };
 </script>
