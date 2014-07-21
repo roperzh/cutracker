@@ -27,4 +27,8 @@ class User
   def self.fetch(email)
     where(email: email).first
   end
+
+  def full_name
+    "#{name} #{surname}"
+  end
 end
