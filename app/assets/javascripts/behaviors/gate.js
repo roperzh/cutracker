@@ -9,7 +9,7 @@ Ui.Gate = Essential.Behavior.extend({
   },
 
   openGate: function(e) {
-    document.body.appendChild(e.detail.content);
+    this.el.appendChild(e.detail.content);
 
     this.animate();
 
@@ -19,7 +19,7 @@ Ui.Gate = Essential.Behavior.extend({
     });
 
     setTimeout(function() {
-      this.el.remove();
+      document.getElementById("gate-container").remove();
     }.bind(this), 500);
   },
 
