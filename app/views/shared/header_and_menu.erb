@@ -1,0 +1,27 @@
+<section class="fixed-top horizontal-menu">
+  <ul class="horizontal-menu-list">
+    <li class="dropdown menu-item" data-behavior="dropdown">
+      <h3 class="dropdown-title"><%= current_user.full_name %></h3>
+      <a href="#" data-behavior="logout">Logout</a>
+      <i class="icon-arrow-down dropdown-toggle"></i>
+      <ul class="dropdown-items">
+        <li class="item"><a href="#">Item</a></li>
+      </ul>
+    </li>
+  </ul>
+</section>
+
+<section class="fixed-left vertical-menu">
+  <header class="menu-header">
+    <h3 class="title">Dashboard</h2>
+  </header>
+  <nav class="multi-menu" role="navigation">
+    <h4 class="single-menu-title">Menu Title</h4>
+    <ul class="single-menu">
+      <li class="single-menu-item">
+        <a href="#">Menu Item</a>
+        <span class="numeric-label"><%= (Random.rand * 100).to_i %></span>
+      </li>
+    </ul>
+  </nav>
+</section>

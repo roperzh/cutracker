@@ -39,7 +39,7 @@ Cuba.define do
   on authenticated(User) do
     on "dashboard" do
       messages = ChatMessage.last_ten
-      res.write view("dashboard", tasks: current_user.tasks, messages: messages)
+      res.write view("dashboard/show", tasks: current_user.tasks, messages: messages)
     end
 
     on "tasks" do

@@ -1,0 +1,29 @@
+<header class="small menu-header">
+  <h3 class="title">Tasks</h3>
+  <i class="icon-arrow-down"></i>
+</header>
+<ul class="tasks-list">
+  <% tasks.each do |task| %>
+    <li class="task paused"
+        data-behavior="task"
+        data-id="<%= task.id %>">
+      <header>
+        <i class="icon-status task-status"></i>
+        <h3 class="task-title"
+            data-behavior="editable"
+            data-name="name"><%= task.name %></h3>
+        <time class="time-spent"><%= task.duration %></time>
+        <ul class="tag-list">
+          <% task.tags.each do |tag| %>
+            <li class="blue tag"><%= tag %></li>
+          <% end %>
+        </ul>
+      </header>
+      <p class="task-description"
+         data-behavior="markdown-editable"
+         data-element="textarea"
+         data-name="description"><%= task.description %>
+      </p>
+    </li>
+  <% end %>
+</ul>

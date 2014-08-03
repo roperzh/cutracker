@@ -1,0 +1,16 @@
+<div class="dashboard">
+  <%= partial "shared/header_and_menu" %>
+
+  <div id="content-container">
+    <div class="grid full-height">
+      <div class="col-1-4 chat-box" data-behavior="chat-box">
+        <%= partial "dashboard/chat_box", messages: messages %>
+      </div>
+
+      <div class="col-3-4 task-box">
+        <%= partial "dashboard/tasks_list", tasks: tasks %>
+      </div>
+    </div>
+  </div>
+
+</div>
