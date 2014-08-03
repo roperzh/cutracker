@@ -53,6 +53,6 @@ Ui.ChatBox = Essential.Behavior.extend({
 
   scrollToLastMessage: function() {
     var lastMessage = this.el.querySelector(".message:last-child");
-    lastMessage.scrollIntoView(true);
+    if(lastMessage) lastMessage.scrollIntoView(true);
   },
 });
