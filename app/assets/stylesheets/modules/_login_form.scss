@@ -8,4 +8,11 @@
     position: absolute;
     right: 0;
   }
+
+  .error-field {
+    text-align: center;
+    font-size: 13px;
+    margin: 15px;
+    color: $persian-red;
+  }
 }

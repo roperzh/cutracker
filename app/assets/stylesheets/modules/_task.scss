@@ -1,0 +1,70 @@
+// -------------------------------------------
+//   Task
+// -------------------------------------------
+
+.task {
+  width: 80%;
+  margin: 10px auto;
+  padding: 15px;
+  max-height: 180px;
+  overflow: hidden;
+
+  border: 1px solid #dbe0ea;
+  border-radius: 5px;
+  background: $white;
+
+  @include transition(all .4s ease-in, height .3s);
+
+  header {
+    position: relative;
+
+    @include clearfix();
+
+    .task-status {
+      float: left;
+      font-size: 60px;
+    }
+
+    .task-title {
+      display: inline-block;
+      margin-left: 30px;
+
+      line-height: 0;
+    }
+
+    .time-spent {
+      position: absolute;
+      top: 5px;
+      right: 0;
+
+      font-size: 30px;
+    }
+  }
+
+  .task-description {
+    width: 95%;
+    height: 65%;
+  }
+
+  .tag-list {
+    margin-left: 60px;
+  }
+
+  &.active {
+    width: 85%;
+    height: 250px;
+    max-height: initial;
+
+    .task-status {
+      &:before { content: '\e602'}
+    }
+  }
+
+  &.paused {
+    .task-status {
+      &:before { content: '\e603'}
+    }
+
+    height: 90px;
+  }
+}
