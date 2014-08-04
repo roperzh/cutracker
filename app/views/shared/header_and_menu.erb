@@ -1,12 +1,8 @@
 <section class="fixed-top horizontal-menu">
   <ul class="horizontal-menu-list">
-    <li class="dropdown menu-item" data-behavior="dropdown">
-      <h3 class="dropdown-title"><%= current_user.full_name %></h3>
-      <a href="#" data-behavior="logout">Logout</a>
-      <i class="icon-arrow-down dropdown-toggle"></i>
-      <ul class="dropdown-items">
-        <li class="item"><a href="#">Item</a></li>
-      </ul>
+    <li class="menu-item">
+      <h3><%= current_user.full_name %></h3>
+      <a href="#" data-behavior="logout"><i class="icon-exit"></i></a>
     </li>
   </ul>
 </section>
