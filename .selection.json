@@ -187,8 +187,8 @@
         "name": "pencil",
         "ligatures": ""
       },
-      "setIdx": 4,
-      "iconIdx": 6
+      "setIdx": 0,
+      "iconIdx": 7
     },
     {
       "icon": {
@@ -210,8 +210,8 @@
         "name": "checkmark",
         "ligatures": ""
       },
-      "setIdx": 4,
-      "iconIdx": 119
+      "setIdx": 0,
+      "iconIdx": 8
     },
     {
       "icon": {
@@ -235,8 +235,34 @@
         "name": "cross",
         "ligatures": ""
       },
-      "setIdx": 4,
-      "iconIdx": 120
+      "setIdx": 0,
+      "iconIdx": 9
+    },
+    {
+      "icon": {
+        "paths": [
+          "M768 640v-128h-320v-128h320v-128l192 192zM704 576v256h-320v192l-384-192v-832h704v320h-64v-256h-512l256 128v576h256v-192z"
+        ],
+        "tags": [
+          "exit",
+          "sign out",
+          "log out",
+          "quit",
+          "close",
+          "logout"
+        ],
+        "grid": 16
+      },
+      "properties": {
+        "id": 260,
+        "order": 35,
+        "prevSize": 32,
+        "code": 58890,
+        "name": "exit",
+        "ligatures": ""
+      },
+      "setIdx": 1,
+      "iconIdx": 260
     }
   ],
   "height": 1024,
@@ -259,8 +285,7 @@
       "showQuickUse": true,
       "quickUsageToken": false,
       "showMetrics": true,
-      "showMetadata": false,
-      "autoHost": true
+      "showMetadata": false
     },
     "imagePref": {
       "color": 0,
@@ -277,9 +302,6 @@
     "showGrid": true,
     "showGlyphs": true,
     "showQuickUse": true,
-    "search": "",
-    "quickUsageToken": {
-      "UntitledProject1": "ZDY0Njc3MzMwOGUxY2IyMTM5YWM1NzU5NjRiOGExNDkjMiMxNDA1NjQ2NDczIyMj"
-    }
+    "search": ""
   }
 }
