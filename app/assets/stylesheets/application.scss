@@ -50,6 +50,7 @@
 @import "modules/tag";
 @import "modules/floating_box";
 @import "modules/login_form";
+@import "modules/chat-controls";
 
 .tag-list {
   list-style: none;
@@ -62,7 +63,7 @@
   border-right: 1px solid $blue-haze;
 
   .messages-list {
-    height: 80%;
+    height: 90%;
     width: 100%;
 
     padding: 0;
