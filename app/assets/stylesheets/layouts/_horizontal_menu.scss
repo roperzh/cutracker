@@ -19,13 +19,19 @@
 
   .menu-item {
     float: left;
-    margin: 0 15px;
+    margin: 0 5px;
+
+    line-height: $content-offset-top;
+    font-size: 12px;
   }
 
   .iconic-item {
+    line-height: $content-offset-top + 10;
+
     a {
-      line-height: $content-offset-top;
       color: $white;
+      text-decoration: none;
+      font-size: 20px;
     }
   }
 }
