@@ -7,6 +7,10 @@
   overflow: hidden;
   border-right: 1px solid $blue-haze;
 
+  .menu-header {
+    top: 43px;
+  }
+
   .messages-list {
     height: 90%;
     width: 100%;
