@@ -65,3 +65,13 @@
 .menu-header {
   border-bottom: 1px solid $blue-haze;
 }
+
+.tab-content {
+  display: none;
+
+  &.active {
+    display: initial;
+  }
+}
+
+
