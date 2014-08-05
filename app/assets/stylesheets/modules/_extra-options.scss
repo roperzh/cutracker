@@ -1,0 +1,50 @@
+// -------------------------------------------
+//   Extra options module
+// -------------------------------------------
+
+.extra-options {
+  height: 30px;
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  background: $mystica;
+  list-style: none;
+  border: solid $blue-haze;
+  border-width: 0 0 1px 0;
+
+  &.compressed {
+    width: 7%;
+    margin: 0 auto;
+    border-width: 0 1px 1px 1px;
+  }
+
+  li {
+    height: 100%;
+
+    color: $lynch;
+    line-height: 30px;
+
+    border: solid $blue-haze;
+    border-width: 0 1px 0 0;
+
+    &:last-child {
+      border-width: 0;
+    }
+
+    &.active {
+      background: $athens-gray;
+      color: $shark;
+    }
+
+    &:hover {
+      background: $athens-gray;
+    }
+
+    a {
+      display: inline-block;
+      width: 100%;
+    }
+  }
+}
