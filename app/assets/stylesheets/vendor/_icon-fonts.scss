@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:url('icomoon.eot?-k5ieb8');
-  src:url('icomoon.eot?#iefix-k5ieb8') format('embedded-opentype'),
-    url('icomoon.woff?-k5ieb8') format('woff'),
-    url('icomoon.ttf?-k5ieb8') format('truetype'),
-    url('icomoon.svg?-k5ieb8#icomoon') format('svg');
+  src:url('icomoon.eot?d26af8');
+  src:url('icomoon.eot?#iefixd26af8') format('embedded-opentype'),
+    url('icomoon.woff?d26af8') format('woff'),
+    url('icomoon.ttf?d26af8') format('truetype'),
+    url('icomoon.svg?d26af8#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -23,6 +23,21 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-uniE60F:before {
+  content: "\e60f";
+}
+.icon-uniE610:before {
+  content: "\e610";
+}
+.icon-settings:before {
+  content: "\e611";
+}
+.icon-notes:before {
+  content: "\e60e";
+}
+.icon-exit:before {
+  content: "\e60a";
+}
 .icon-mail:before {
   content: "\e600";
 }
@@ -61,10 +76,4 @@
 }
 .icon-plus:before {
   content: "\e60d";
-}
-.icon-notes:before {
-  content: "\e60e";
-}
-.icon-exit:before {
-  content: "\e60a";
 }
