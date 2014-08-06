@@ -1,27 +1,29 @@
 <header class="small menu-header">
   <h3 class="title">Team Chat</h3>
   <ul class="extra-options grid">
-    <li class="col-1-3 active">
+    <li class="col-1-3 active tab-header" data-content="chat-box">
       <a href="#"><i class="icon-chat"></i></a>
     </li>
-    <li class="col-1-3">
+    <li class="col-1-3 tab-header" data-content="announces">
       <a href="#"><i class="icon-megaphone"></i></a>
     </li>
-    <li class="col-1-3">
+    <li class="col-1-3 tab-header" data-content="notes">
       <a href="#"><i class="icon-notes"></i></a>
     </li>
   </ul>
 </header>
 
-<ul class="messages-list">
-  <% messages.reverse.each do |message| %>
-    <li class="message" data-behavior="chat-message">
-      <strong><%= message.user.full_name %> : </strong>
-      <p class="message-content"><%= message.content %></p>
-    </li>
-  <% end %>
-</ul>
+<section data-name="chat-box" class="tab-content active">
+  <ul class="messages-list">
+    <% messages.reverse.each do |message| %>
+      <li class="message" data-behavior="chat-message">
+        <strong><%= message.user.full_name %> : </strong>
+        <p class="message-content"><%= message.content %></p>
+      </li>
+    <% end %>
+  </ul>
 
-<div class="chat-controls">
-  <input class="message-input" type="text" placeholder="Send a message">
-</div>
+  <div class="chat-controls">
+    <input class="message-input" type="text" placeholder="Send a message">
+  </div>
+</section>
