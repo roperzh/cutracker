@@ -5,6 +5,7 @@
 Ui.Task = Essential.Behavior.extend({
   init: function() {
     this.id = this.el.getAttribute("data-id");
+    this.model = Cutracker.Models.Task.new(this.id);
     this.timeElement = this.el.getElementsByClassName("time-spent")[0];
     this.chronometer = Ui.Chronometer.new(this.timeElement);
     this.isActive = false;
@@ -41,27 +42,12 @@ Ui.Task = Essential.Behavior.extend({
     this.el.classList.add("paused");
     this.chronometer.pause();
     this.isActive = false;
-    this.save({
+    this.model.update({
       duration: this.chronometer.duration()
     });
   },
 
   saveAttribute: function(e) {
-    this.save(e.detail);
+    this.model.update(e.detail);
   },
-
-  save: function(data) {
-    Ajax.put({
-      url: "tasks/" + this.id,
-      data: {
-        task: data
-      },
-      success: function(e) {
-        console.log("success", e);
-      },
-      error: function(e) {
-        console.log("error", e);
-      }
-    });
-  }
 });
