@@ -1,5 +1,6 @@
 class Task
   include Mongoid::Document
+  include Mongoid::Timestamps
   include Mongoid::TagsArentHard
 
   # Field definitions
@@ -16,6 +17,10 @@ class Task
   # Associations
   belongs_to :user
   belongs_to :project
+
+  def self.last_by_user(user_id)
+    where(user_id: user_id).desc(:updated_at)
+  end
 
   def active?
     status == 1
