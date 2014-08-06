@@ -19,7 +19,7 @@ class Task
   belongs_to :project
 
   def self.last_by_user(user_id)
-    where(user_id: user_id).desc(:updated_at)
+    where(user_id: user_id).desc(:updated_at).limit(10)
   end
 
   def active?
